@@ -5,6 +5,7 @@ i made a copycat of it in C#,
 i know the code is pretty gross and yes i did get help from AI (pls dont bully me over it).
 the Binaries included in The zip file are fully C# & Easily Decompilable
 ![NBLock](files.jpg)
+![decryptor](dec.jpg)
 
 ## Educational Purposes Only
 
