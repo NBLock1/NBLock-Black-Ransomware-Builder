@@ -1,11 +1,18 @@
 # NBLock-Black-Ransomware-Builder
 Builder for NBLock Black Ransomware
+## README
 By analysing LockBit 3.0 Black Ransomware
 i made a copycat of it in C#,
 i know the code is pretty gross and yes i did get help from AI (pls dont bully me over it).
 the Binaries included in The zip file are fully C# & Easily Decompilable
+## Encrypted Files [File icon Setting true]
 ![NBLock](files.jpg)
+## Builder Files
+![Builderfiles](builder.jpg)
+Easy & Same As LockBIT 3.0 Black's Builder files.
+## Decryptor UI 
 ![decryptor](dec.jpg)
+i spent a LOT of time on this UI.
 
 ## Educational Purposes Only
 
