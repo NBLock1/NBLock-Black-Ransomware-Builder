@@ -1,7 +1,11 @@
 # NBLock-Black-Ransomware-Builder
 Builder for NBLock Black Ransomware
 ## Warning
-!THIS IS NOT A CRACK OR A LEAK!
+!THIS IS NOT A CRACK OR A LEAK THIS IS THE OFFICIAL REPO FOR NBLOCK BLACK BUILDER!
+## Source's
+https://github.com/Tennessene/LockBit
+/
+https://www.splunk.com/en_us/blog/security/gone-in-52-seconds-and-42-minutes-a-comparative-analysis-of-ransomware-encryption-speed.html
 ## README
 By analysing LockBit 3.0 Black (LB3) Ransomware
 i made a copycat of it in C#,
@@ -17,6 +21,7 @@ Same As LB3's Builder files.
 i spent a LOT of time on copy'ing LB3's Decryptor UI.
 ## Nerdy Stuff
  [ THIS PART IS AI GENERATED BECAUSE IM LAZY, BASICLY ITS FAST,UNIQUE AND SECURE (AES 256 CBC, RSA-2048) ]
+ 
 ​🔑 Cryptographic Architecture
 ​Hybrid Encryption Scheme: The payload utilizes a high-performance hybrid encryption model combining symmetric and asymmetric cryptography.
 ​Symmetric Layer: Files are encrypted using AES-256 (CipherMode.CBC). A unique key and Initialization Vector (IV) are generated dynamically for each execution session.
