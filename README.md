@@ -1,16 +1,25 @@
 # NBLock-Black-Ransomware-Builder
 Builder for NBLock Black Ransomware
+| Project | Info |
+| :--- | :--- |
+| **Framework** | .NET 4+ |
+| **IDE** | Nano |
+
+![C#](https://img.shields.io/badge/Language-C%23-purple?style=for-the-badge&logo=csharp)
+
 ## Warning
-!THIS IS NOT A CRACK OR A LEAK THIS IS THE OFFICIAL REPO FOR NBLOCK BLACK BUILDER!
+!THIS IS NOT A CRACK OR A LEAK THIS IS THE OFFICIAL REPO FOR  NBLOCK BLACK BUILDER!
 ## Source's
-https://github.com/Tennessene/LockBit
+[LockBIT Black Builder files Github Repository](https://github.com/Tennessene/LockBit)
 /
-https://www.splunk.com/en_us/blog/security/gone-in-52-seconds-and-42-minutes-a-comparative-analysis-of-ransomware-encryption-speed.html
+[Splunk 2022 ransomware Encryption speed Comparison](https://www.splunk.com/en_us/blog/security/gone-in-52-seconds-and-42-minutes-a-comparative-analysis-of-ransomware-encryption-speed.html)
+/
+[Online IL/.NET/C# Decompiler](https://decompiler.com/)
 ## README
 By analysing LockBit 3.0 Black (LB3) Ransomware
 i made a copycat of it in C#,
 i know the code is pretty gross and yes i did get help from AI (pls dont bully me over it).
-the Binaries included in The zip file are fully C# & Easily Decompilable
+the Binaries included in The zip file are fully C# & Decompilable With Dnspy/ILspy/[Online Decompiler](https://decompiler.com)
 ## Encrypted Files [File icon Set true]
 ![NBLock](files.jpg)
 ## Builder Files
@@ -21,33 +30,33 @@ Same As LB3's Builder files.
 i spent a LOT of time on copy'ing LB3's Decryptor UI.
 ## Nerdy Stuff
  [ THIS PART IS AI GENERATED BECAUSE IM LAZY, BASICLY ITS FAST,UNIQUE AND SECURE (AES 256 CBC, RSA-2048) ]
+
+> ​Hybrid Encryption: AES-256-CBC file encryption combined with RSA-2048 key wrapping.
+
+> ​Session Unique Keys: Dynamic AES key and IV generated per execution, saved encrypted inside a hidden key.bin file.
+
+​Intermittent Encryption: Full encryption with PKCS7 padding for files under 100MB; chunked stepped encryption with NoPadding for files over 100MB to optimize performance.
+
+> ​Custom File Footer: Appends a 5-byte structural identifier consisting of the NBL! ASCII marker and the active mode byte.
+​
+> Optimized Multi-Threading: Parallel traversal engine auto-scaled to CPU Cores multiplied by 1.5, bounded to a minimum floor of 4 concurrent threads.
+
+> ​Shadow Copy Deletion: Invokes hidden system utilities including vssadmin, wbadmin, and reagentc to destroy system backups and restore points.
+
+​Boot Configuration Modification: Alters system boot policy to disable Windows Recovery Environment, Safe Mode configurations, and the Windows Error Reporting Service (WerSvc).
+
+> ​Event Log Cleansing: Explicitly clears Application, System, Security, and Setup log channels to minimize forensic artifacts.
+
+> ​Network and AV Invalidation: Appends entries to the local drivers/etc/hosts file to redirect critical security and antivirus update domains to loopback (127.0.0.1).
+
+​Directory Whitelisting: Automatically skips critical operating system paths containing Windows or Microsoft, alongside extensions like .exe, .sys, and .dat.
+
+> ​Network Share Discovery: Queries the MountPoints2 registry path to dynamically identify and enumerate connected network infrastructure and mapped drives.
+
+​Registry Hijacking: Registers a unique file extension based on the hardware identifier, maps it to a custom icon resource, and forces a global shell refresh via native API calls.
+
+> ​Desktop Persistence: Updates user desktop configuration paths via the registry to enforce a modified background wallpaper image.
  
-​🔑 Cryptographic Architecture
-​Hybrid Encryption Scheme: The payload utilizes a high-performance hybrid encryption model combining symmetric and asymmetric cryptography.
-​Symmetric Layer: Files are encrypted using AES-256 (CipherMode.CBC). A unique key and Initialization Vector (IV) are generated dynamically for each execution session.
-​Asymmetric Layer: The dynamic AES key is wrapped/encrypted using a hardcoded RSA-2048 public key ([[PKEY]]). The encrypted key blob and IV are saved locally into a hidden system file (key.bin) on the desktop to facilitate potential recovery via the corresponding private key.
-​⚙️ Encryption Engine & Optimization
-​Inteligent File Chunking (Intermittent Encryption): To optimize performance and reduce I/O overhead on large files, the code splits its behavior into two modes based on file size (threshold: 100 MB):
-​Full Encryption (mode 0x00): Files smaller than 100 MB are fully encrypted using PKCS7 padding.
-​Intermittent/Streamed Encryption (mode 0x01): Files larger than 100 MB are encrypted in fixed steps using NoPadding to maximize speed. The step interval varies based on file size tiers (25 MB, 50 MB, or 100 MB steps).
-​High-Throughput Multi-Threading: Scalability is managed via Parallel.ForEach. The payload queries the host cpu core count and scales the maximum degree of parallelism dynamically ({\text{Cores}} \times 1.5), bound to a minimum floor of 4 concurrent worker threads.
-​Metadata Structuring: Every processed file is stamped with a custom 5-byte footer array (0x4E 0x42 0x4C 0x21 + mode_byte) translating to the ASCII marker NBL! followed by the encryption mode indicator.
-​🛑 Anti-Recovery & System Modification
-​Shadow Copy & Backup Deletion (DSC): Invokes system tools hiddenly (runas verb) to destroy system recovery points:
-​vssadmin.exe delete shadows /all /quiet (Deletes Volume Shadow Copies).
-​reagentc.exe /disable (Disables Windows Recovery Environment).
-​bcdedit manipulation to ignore boot failures, disable automated recovery, and remove safe mode configurations.
-​wbadmin delete catalog -quiet (Discards Windows Backup history).
-​Disables the Windows Error Reporting Service (WerSvc).
-​Event Log Cleansing (ZxaUus): Explicitly clears critical Windows Event Log channels (Application, System, Security, Setup) to erase execution footprints.
-​Network & Security Invalidation (XqxacZi): Modifies the local Windows hosts file (drivers\etc\hosts) to redirect major cybersecurity domains, antivirus update endpoints, and reporting portals to loopback (127.0.0.1), preventing updates, threat analysis submissions, or victim support access.
-​🛡️ Evasion & Environment Awareness
-​Whitelisting: To maintain system stability during execution, the traversal engine strictly skips directories containing strings like "Microsoft" or "Windows", as well as essential extensions such as .exe, .sys, and .dat.
-​Network Discovery (Kbzha): Queries the Windows Registry (MountPoints2) to actively scan for and append remote network shares and mapped network drives into the targeting queue.
-​File Overwriting (Wiping/Shredding) (destr): Implements a destructive 64KB buffer rewrite engine that fills files with randomized noise via a Pseudo-Random Number Generator (PRNG) prior to standard OS deletion, neutralizing basic data-recovery or forensic carving attempts.
-​Custom File Association: Creates a unique file extension dynamically mapped to the first 5 characters of the victim's unique hardware identifier (MD5 hash of hardware variables).
-​Registry Hijacking: Injects keys under Software\Classes to associate the newly generated extension with a custom icon resource (lock.ico) and issues global shell refresh notices via native API calls (SHChangeNotify & SystemParametersInfo).
-​Desktop Persistence: Rewrites the user wallpaper configuration to force a custom background image (locked.png).
 ## Educational Purposes Only
 
 This repository and its contents are intended solely for academic research, educational purposes, and authorized security analysis. 
