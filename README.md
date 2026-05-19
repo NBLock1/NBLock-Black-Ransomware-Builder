@@ -38,7 +38,7 @@ i spent a LOT of time on copy'ing LB3's Decryptor UI.
 ​Intermittent Encryption: Full encryption with PKCS7 padding for files under 100MB; chunked stepped encryption with NoPadding for files over 100MB to optimize performance.
 
 > ​Custom File Footer: Appends a 5-byte structural identifier consisting of the NBL! ASCII marker and the active mode byte.
-​
+ 
 > Optimized Multi-Threading: Parallel traversal engine auto-scaled to CPU Cores multiplied by 1.5, bounded to a minimum floor of 4 concurrent threads.
 
 > ​Shadow Copy Deletion: Invokes hidden system utilities including vssadmin, wbadmin, and reagentc to destroy system backups and restore points.
