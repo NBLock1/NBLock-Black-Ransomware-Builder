@@ -1,6 +1,6 @@
 # NBLock-Black-Ransomware-Builder
 Builder for NBLock Black Ransomware
-| Project | Info |
+| Project | NBLock Black Builder |
 | :--- | :--- |
 | **Framework** | .NET 4+ |
 | **IDE** | Nano |
