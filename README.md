@@ -29,6 +29,7 @@ Same As LB3's Builder files.
 ![decryptor](dec.jpg)
 i spent a LOT of time on copy'ing LB3's Decryptor UI.
 ## Nerdy Stuff
+** (some Features left in v0.1.5 and before) **
  [ THIS PART IS AI GENERATED BECAUSE IM LAZY, BASICLY ITS FAST,UNIQUE AND SECURE (AES 256 CBC, RSA-2048) ]
 
 > ​Hybrid Encryption: AES-256-CBC file encryption combined with RSA-2048 key wrapping.
