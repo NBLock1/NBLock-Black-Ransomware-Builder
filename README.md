@@ -27,6 +27,9 @@ the Binaries included in The zip file are fully C# & Decompilable With Dnspy/ILs
 ## Builder Files
 ![Builderfiles](builder.jpg)
 Same As LB3's Builder files.
+## Disk
+**_NBB-v0.1.9-Salsa20_**
+![disk](exp.png)
 ## Decryptor UI 
 ![decryptor](dec.jpg)
 i spent a LOT of time on copy'ing LB3's Decryptor UI.
