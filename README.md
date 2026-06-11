@@ -9,6 +9,8 @@ Builder for NBLock Black Ransomware
 
 ## Warning
 !THIS IS NOT A CRACK OR A LEAK THIS IS THE OFFICIAL REPO FOR  NBLOCK BLACK BUILDER!
+
+**_THE PICTURES LISTED BELOW MIGHT BE OUTDATED!_**
 ## Source's
 [LockBIT Black Builder files Github Repository](https://github.com/Tennessene/LockBit)
 /
